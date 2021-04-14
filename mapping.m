@@ -1,25 +1,14 @@
 I = imread('54774-4-new - Nuclei Labels.tif');
 I2 = I>0;
-
-%% plot 
-
-x1 = 12972.22;
-y1 = 4350.945;
-c1 = 12965; c2 = 12980;
-c3 = 4341; c4 = 4359;
-
-imshow(I2),colormap jet
-hold on
-plot([c1 c2],[y1 y1],'green')
-plot([x1 x1],[c3 c4],'green')
+%upload (X,Y) coordinate data
 
 %% define coordinates
 x1 = table2array(xandyedited(:,2));
 y1 = table2array(xandyedited(:,3));
-% is vector of xs
-%y1 is vector of ys
+%x1 is vector of x's
+%y1 is vector of y's
 
-%% loop
+%% overlay selected coordinates on selected image (ex.segmentation labels)
 
 imshow(I2), colormap jet
 hold on
