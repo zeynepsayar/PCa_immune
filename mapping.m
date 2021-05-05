@@ -1,14 +1,14 @@
-I = imread('54774-4-new - Nuclei Labels.tif');
+I = imread('tissueID - Nuclei Labels.tif'); %load segmentation mask
 I2 = I>0;
 %upload (X,Y) coordinate data
 
-%% define coordinates
+%% get x any y coordinates of cells of interest (ie. in a specific cluster)
 x1 = table2array(xandyedited(:,2));
 y1 = table2array(xandyedited(:,3));
 %x1 is vector of x's
 %y1 is vector of y's
 
-%% overlay selected coordinates on selected image (ex.segmentation labels)
+%% overlay selected coordinates on selected image 
 
 imshow(I2), colormap jet
 hold on
